@@ -6,8 +6,8 @@ app.use(cors());
 
 ///////////////
 app.get("/formula", async (req, res) => {
-    console.log("hello", req.params.formula);
-    const formula = req.params.formula;
+    console.log("hello", req.query.formula);
+    const formula = req.query.formula;
     fetch(
         `https://api.airtable.com/v0/appXVGqKkJSZDvYp4/tblNgb2XIhEuq4DJE?filterByFormula=${formula}`,
         {
